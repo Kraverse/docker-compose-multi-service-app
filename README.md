@@ -54,7 +54,7 @@ Build and start both services:
 
 ```bash
 docker compose up --build
-``
+```
 
 Open **http://localhost:3000** in your browser.
 
@@ -68,14 +68,14 @@ Run these commands from the project directory in a second terminal:
 docker compose ps
 docker ps
 docker compose logs web
-``
+```
 
 Expected web logs:
 
 ```text
 MongoDB Connected
 Server running on port 3000
-``
+```
 
 Health endpoint: **http://localhost:3000/health**
 
@@ -83,7 +83,7 @@ Health endpoint: **http://localhost:3000/health**
 
 ```bash
 docker compose down
-``
+```
 
 The containers and Compose network are removed, but the named MongoDB volume is retained.
 
@@ -91,7 +91,7 @@ To remove the volume and all stored database data as well:
 
 ```bash
 docker compose down -v
-``
+```
 
 ## Services
 
