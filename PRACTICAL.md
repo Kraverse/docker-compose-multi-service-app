@@ -47,55 +47,55 @@ cd docker-compose-multi-service-app
 ### 2. Build and start the services
 ```bash
 docker compose up --build
-``
+```
 This builds the Node.js image, downloads the MongoDB image if it is not already available, creates the Compose network and volume, and starts both services. MongoDB must pass its health check before the web service starts.
 
 ### 3. Check Compose services
 Open a second terminal in the project directory:
 ```bash
 docker compose ps
-``
+```
 Both `web` and `mongo` should be running. MongoDB should report healthy.
 
 ### 4. Check running containers
 ```bash
 docker ps
-``
+```
 Verify the Node.js and MongoDB containers and their published ports.
 
 ### 5. Check web-service logs
 ```bash
 docker compose logs web
-``
+```
 Expected messages:
 ```text
 MongoDB Connected
 Server running on port 3000
-``
+```
 
 ### 6. Test in a browser
 Open:
 ```text
 http://localhost:3000
-``
+```
 The page should show that the Node.js service is running and MongoDB is connected. Refreshing the page stores another visit record in MongoDB.
 
 Optional health endpoint:
 ```text
 http://localhost:3000/health
-``
+```
 It should return JSON indicating that the database is connected.
 
 ### 7. Stop the application
 ```bash
 docker compose down
-``
+```
 This stops and removes the containers and Compose network. The named database volume is retained.
 
 To also delete the stored database data (destructive):
 ```bash
 docker compose down -v
-``
+```
 
 ## Key Commands
 
