@@ -1,0 +1,14 @@
+{
+  "name": "multi-service-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Node.js and MongoDB application deployed with Docker Compose",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5"
+  }
+}
